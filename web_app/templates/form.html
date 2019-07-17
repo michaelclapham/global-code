@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="/static/css/main.css">
+    <style>
+        body {
+            color: black;
+        }
+    </style>
+</head>
+<form action="/add_todo">
+    <label>
+        To do item
+        <input type="text" name="item">
+        <button type="submit">Add</button>
+    </label>
+</form>
+<ol>
+    <!-- For loop logic of jinja template -->
+    {%for item in items%}
+    <li>{{item}}</li>
+    {%endfor%}
+
+</ol>
+
+<body>
+
+</body>
+
+</html>
