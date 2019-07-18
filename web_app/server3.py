@@ -15,8 +15,8 @@ def create_table():
 def get_todos_from_db():
     conn = sqlite3.connect('example.db')
     c = conn.cursor()
-    c.execute("SELECT * FROM todos;")
-    return c.fetchall()
+    c.execute("SELECT item FROM todos;")
+    return list(map(lambda row: row[0], c.fetchall()))
 
 def add_todo_to_db(item):
     conn = sqlite3.connect('example.db')
