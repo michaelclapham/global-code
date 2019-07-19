@@ -1,3 +1,3 @@
 import paho.mqtt.publish as publish
 
-publish.single("paho/test/single", "boo!", hostname="localhost", port=4000)
+publish.single("ucc/michael", "bzzzz, I like mosquitto", hostname="broker.hivemq.com", port=1883)

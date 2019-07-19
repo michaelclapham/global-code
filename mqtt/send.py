@@ -5,9 +5,9 @@ def on_connect(client, userdata, flags, rc):
 
     while True:
         message = input('Your message: ')
-        client.publish('glblcd/sam', message)
+        client.publish('ucc/name', message)
 
 client = mqtt.Client()
 client.on_connect = on_connect
-client.connect("localhost", 4000, 60)
+client.connect("broker.hivemq.com", 1883, 60)
 client.loop_forever()

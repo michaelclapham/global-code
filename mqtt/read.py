@@ -14,7 +14,7 @@ client = mqtt.Client()
 client.on_connect = on_connect
 client.on_message = on_message
 
-client.connect("localhost", 4000, 60)
+client.connect("broker.hivemq.com", 1883, 60)
 
 client.loop_forever()
 
